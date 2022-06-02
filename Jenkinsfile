@@ -1,5 +1,5 @@
 pipeline{
-    agent{ label 'NODEJS' }
+    agent{ label 'build_pipeline' }
     triggers{ cron '0 * * * *'}
     stages{
         stage( 'checkout' ){
