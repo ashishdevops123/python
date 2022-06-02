@@ -18,9 +18,12 @@ pipeline{
         }
         stage('test'){
             steps{
-                sh 'python3 -m unittest test_test1.py'
+                sh 'pip install pytest pytest-azurepipelines'\
+                sh ' pip install pytest-cov'
+                sh ' /home/jenkins/.local/bin/pytest --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml'
             }
         }
+        
     }
 
 }
