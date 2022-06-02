@@ -16,6 +16,11 @@ pipeline{
 
             }
         }
+        stage('test'){
+            steps{
+                sh 'tox -e py'
+            }
+        }
     }
 
 }
