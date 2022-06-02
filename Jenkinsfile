@@ -18,7 +18,7 @@ pipeline{
         }
         stage('test'){
             steps{
-                sh 'tox -e py'
+                sh 'python -m unittest tes_test1.py'
             }
         }
     }
